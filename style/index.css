@@ -1,0 +1,111 @@
+.accueil-main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.accueil-main h1 {
+    border: 3px solid #F0DDC5;
+    font-size: 200%;
+    display: inline-block;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+.accueil-main p {
+    line-height: 1.4;
+    font-size: 120%;
+}
+
+/* Accueil - Présentation du projet */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    border: solid 2px black;
+    border-radius: 25px;
+    background-color: #2D2A4A;
+    color: #F0DDC5;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px
+}
+
+.photo-intro-gauche, .photo-intro-droite {
+    width: 25%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.photo-intro-gauche {
+    transform: scaleX(-1);
+}
+
+.text-intro {
+    flex: 1;
+    text-align: center;
+}
+
+/* Accueil - Présentation des chiens */
+.intro-compagnons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    border: solid 2px black;
+    border-radius: 25px;
+    background-color: #2D2A4A;
+    color: #F0DDC5;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px
+}
+
+.photo-intro-compagnon-gauche, .photo-intro-compagnon-droite {
+    width: 25%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#photo-mochi-02 {
+    transform: scaleX(-1);
+}
+
+.photos-chiens-accueil a {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    font-size: large;
+    color: #F0DDC5;
+}
+
+/* Media Screen */
+
+/* Ecran large - 1900px */
+@media screen and (min-width: 1900px) {
+    main {
+        font-size: 120%;
+    }
+}
+
+/* Ecran de téléphone - 900px */
+@media screen and (max-width: 900px) {
+    .accueil-main img {
+        display: none;
+    }
+}

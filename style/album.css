@@ -1,0 +1,124 @@
+main {
+    text-align: center;
+}
+
+
+
+main h2 {
+    text-align: center;
+    color: #2D2A4A;
+}
+
+/* Menu sticky */
+.album-menu-sticky {
+  position: sticky;
+  top: 0;
+  background-color: #2D2A4A;
+  color: #F0DDC5;
+  border: solid 2px black;
+  border-radius: 25px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+}
+
+.album-menu-link {
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  flex: 1;
+}
+
+.album-menu-link a {
+  font-size: x-large;
+  padding: 5px 15px;
+  text-align: center;
+  color: #F0DDC5;
+  text-decoration: none;
+}
+
+.album-menu-link a:hover {
+  text-decoration: none;
+}
+
+.album-menu-sticky h1 {
+    color: #F0DDC5;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* All pictures */
+.album-complet img {
+  width: 100%;
+  height: 450px;
+  display: block;
+  object-fit: cover;
+}
+
+.album-portraits, .album-temples, .album-elephants, .album-paysages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 450px 450px;
+  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Hover */
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #F0DDC5;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.lien-conteneur-photo-album {
+  position: relative;
+}
+
+.lien-conteneur-photo-album:hover .photo-hover {
+  display: flex;
+}
+
+/* Media Screen */
+
+/* Ecran large - 1900px */
+
+/* Ecran de téléphone - 900px */
+
+@media screen and (max-width: 1200px) {
+
+  .album-menu-sticky {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .album-menu-sticky h1 {
+    text-align: center;
+    margin: 5px;
+  }
+
+  .album-menu-link {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .album-menu-link a {
+    font-size: medium;
+    padding: 5px 10px;
+  }
+}
