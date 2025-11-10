@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 
-.partie-1 {
+.partie-1, .partie-2 {
   margin: 20px 20px;
   display: flex;
   border: #2D2A4A solid 2px;
@@ -30,7 +30,7 @@ body {
 
 /* Mise en page txt + img */
 
-.p-p1 {
+.p-p1, .p-p2 {
   width: 50%;
   padding: 15px;
   text-align: center;
@@ -39,7 +39,7 @@ body {
   max-height: 100%;
 }
 
-.img-p1 {
+.img-p1, .img-p2 {
   width: 50%;
   overflow: hidden;
 }
