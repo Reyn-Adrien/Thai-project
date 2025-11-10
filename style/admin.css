@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #2D2A4A;
+  line-height: 1.6;
+}
+
 /* Conteneur principal */
 
 .admin-content, .admin-sidebar {
@@ -5,19 +16,29 @@
   gap: 20px;
 }
 
+.admin-wrapper {
+  display: flex;
+  align-items: flex-start;  /* aligne le haut des éléments */
+  gap: 20px;
+  margin: 20px;
+}
+
 /* Menu latéral */
 
 .admin-sidebar {
     position: sticky;
-    top: 20px;            /* distance depuis le haut */
-    width: 200px;
+    top: 20px;          
+    width: 180px;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     gap: 15px;
     padding: 15px;
     background-color: #2D2A4A;
     border-radius: 10px;
     margin: 20px;
+    height: fit-content;
+    font-size: x-large;
 }
 
 .admin-sidebar a {
@@ -26,6 +47,7 @@
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 1.3rem;
 }
 
 .admin-sidebar a:hover {
@@ -35,7 +57,12 @@
 /* Contenu principal */
 
 .admin-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  color: #2D2A4A;
+  flex: 1;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.2rem);
 }
 
 .admin-content section {
@@ -43,4 +70,66 @@
   padding: 20px;
   border: solid 2px #2D2A4A;
   border-radius: 10px;
+}
+
+.visas-header, .animaux-header, .mt-gym-header {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.visas-header img, .animaux-header img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.mt-gym-header img {
+  object-fit: cover;
+  width: 300px;
+  height: auto;
+  border: solid #2D2A4A 1px;
+  border-radius: 50%;
+}
+
+/* --- Responsive --- */
+
+/* Tablettes (<= 1024px) */
+@media (max-width: 1024px) {
+  .admin-wrapper {
+    gap: 15px;
+  }
+
+  .admin-sidebar {
+    width: 180px;
+    padding: 10px;
+  }
+
+  .admin-content {
+    font-size: clamp(0.9rem, 2vw + 0.4rem, 1.1rem);
+  }
+}
+
+/* Mobiles (<= 768px) */
+@media (max-width: 768px) {
+  .admin-wrapper {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 0;
+    margin-bottom: 15px;
+  }
+
+  .admin-sidebar a {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+
+  .admin-content {
+    font-size: clamp(0.9rem, 3vw + 0.3rem, 1rem);
+  }
 }

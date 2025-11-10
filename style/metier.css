@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #2D2A4A;
+  line-height: 1.6;
+}
+
+/* Contenu main */
+
+.metier-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.partie-1 {
+  margin: 20px 20px;
+  display: flex;
+  border: #2D2A4A solid 2px;
+  align-items: center;   
+  gap: 0;  
+  overflow: hidden;
+}
+
+/* Mise en page txt + img */
+
+.p-p1 {
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+  font-size: large;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.img-p1 {
+  width: 50%;
+  height: 100%;
+}
+
+.img-p1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+/* Tablette : largeur ≤ 1024px - modif à 1300px */
+@media screen and (max-width: 1300px) {
+  .partie-1 {
+    height: 250px;
+    gap: 10px;
+  }
+}
+
+/* Mobile : largeur ≤ 768px */
+@media screen and (max-width: 768px) {
+  .partie-1 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .p-p1, .img-p1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-p1 img {
+    height: auto;
+  }
+}
