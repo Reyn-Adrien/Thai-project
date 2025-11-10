@@ -21,9 +21,11 @@ body {
   margin: 20px 20px;
   display: flex;
   border: #2D2A4A solid 2px;
-  align-items: center;   
+  border-radius: 50px;
+  align-items: stretch;   
   gap: 0;  
   overflow: hidden;
+  height: 200px;
 }
 
 /* Mise en page txt + img */
@@ -39,14 +41,13 @@ body {
 
 .img-p1 {
   width: 50%;
-  height: 100%;
+  overflow: hidden;
 }
 
 .img-p1 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-
 }
 
 /* Tablette : largeur ≤ 1024px - modif à 1300px */
